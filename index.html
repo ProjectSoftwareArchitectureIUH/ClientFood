@@ -75,6 +75,7 @@
         let url = 'https://serviceapigateway.herokuapp.com/orders/all/';
     $.ajax({
         url: url,
+        headers: {  'Access-Control-Allow-Origin': 'https://serviceapigateway.herokuapp.com/orders/all/' },
         type: "Get",
         dataType: "json",
         async: true,
@@ -111,6 +112,7 @@
     $.ajax({
         url: url,
         type: "Get",
+        headers: {  'Access-Control-Allow-Origin': 'https://serviceapigateway.herokuapp.com/shipping/all/' },
         dataType: "json",
         async: true,
         beforeSend: function (xhr) {
@@ -145,6 +147,7 @@
     $.ajax({
         url: url,
         type: "Get",
+        headers: {  'Access-Control-Allow-Origin': 'https://serviceapigateway.herokuapp.com/orders/shipping/' },
         dataType: "json",
         async: true,
         beforeSend: function (xhr) {
