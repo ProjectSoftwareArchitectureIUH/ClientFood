@@ -72,7 +72,7 @@
     </div>
     <script>
        function loadDataOrders(){
-        let url = 'https://serviceorders.herokuapp.com/orders/all/';
+        let url = 'https://serviceapigateway.herokuapp.com/orders/all/';
     $.ajax({
         url: url,
         type: "Get",
@@ -107,7 +107,7 @@
     loadDataShipping();
        }
        function loadDataShipping() {
-            let url = 'https://serviceshipping.herokuapp.com/shipping/all/';
+            let url = 'https://serviceapigateway.herokuapp.com/shipping/all/';
     $.ajax({
         url: url,
         type: "Get",
@@ -141,7 +141,7 @@
        function findOrders() {
         let id = document.getElementById("inputId").value;
        
-          let url = ' https://serviceorders.herokuapp.com/orders/shipping/'+id;
+          let url = ' https://serviceapigateway.herokuapp.com/orders/shipping/'+id;
     $.ajax({
         url: url,
         type: "Get",
