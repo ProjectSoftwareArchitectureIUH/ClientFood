@@ -72,10 +72,9 @@
     </div>
     <script>
        function loadDataOrders(){
-        let url = 'https://serviceapigateway.herokuapp.com/orders/all/';
+        let url = 'https://serviceorders.herokuapp.com/orders/all/';
     $.ajax({
         url: url,
-        headers: {  'Access-Control-Allow-Origin': 'https://serviceapigateway.herokuapp.com/orders/all/' },
         type: "Get",
         dataType: "json",
         async: true,
@@ -108,11 +107,10 @@
     loadDataShipping();
        }
        function loadDataShipping() {
-            let url = 'https://serviceapigateway.herokuapp.com/shipping/all/';
+            let url = 'https://serviceshipping.herokuapp.com/shipping/all/';
     $.ajax({
         url: url,
         type: "Get",
-        headers: {  'Access-Control-Allow-Origin': 'https://serviceapigateway.herokuapp.com/shipping/all/' },
         dataType: "json",
         async: true,
         beforeSend: function (xhr) {
@@ -143,11 +141,10 @@
        function findOrders() {
         let id = document.getElementById("inputId").value;
        
-          let url = ' https://serviceapigateway.herokuapp.com/orders/shipping/'+id;
+          let url = ' https://serviceorders.herokuapp.com/orders/shipping/'+id;
     $.ajax({
         url: url,
         type: "Get",
-        headers: {  'Access-Control-Allow-Origin': 'https://serviceapigateway.herokuapp.com/orders/shipping/' },
         dataType: "json",
         async: true,
         beforeSend: function (xhr) {
